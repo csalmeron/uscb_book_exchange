@@ -6,15 +6,15 @@ $(document).ready(function()
    	
    	var searchQuery = $('#search').val();
    	
-   	window.alert(searchQuery);
+   	//window.alert(searchQuery);
    	   	
    	//window.alert("The error is before I call searchListing");
    	
     searchListings(searchQuery).success(function(data) 
     {   
     	window.alert("the function call has been made successfully");
-    	window.alert(data);
-   	     	//parseResults(data);  	
+    	//window.alert(data);
+   	     	parseResults(data);  	
 }).error(function(xhr, textStatus, errorThrown)
 {
 	window.alert(xhr.status);
