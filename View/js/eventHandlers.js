@@ -1,18 +1,22 @@
-$(document).ready(function() {	
+$(document).ready(function() {
 	
-	redirectTime = 1000;	
+	//page dependencies	
+	
+	var redirectTime = 1000;	
 	
 	checkLoggedInCookie();
 
-	verifyUser();
-	
-	//window.alert("boom");
+	verifyUser();		
 	
 	setOptions();
 	
 	initializeModals();	
 	
-	//window.alert("clap");
+	
+	//end page dependencies
+	
+	//start event handlers
+	
 
 	$("#passwordSubmit").click(function() {
 
@@ -66,9 +70,9 @@ $(document).ready(function() {
 					
 					setTimeout(function() {
 						window.location.href = "index.html";
-						//will redirect to your blog page (an ex: blog.html)
+						
 					}, redirectTime);
-					//will call the function after 2 secs
+					
 
 				}
 
@@ -108,9 +112,9 @@ $(document).ready(function() {
 					
 					setTimeout(function() {
 						window.location.href = "index.html";
-						//will redirect to your blog page (an ex: blog.html)
+						
 					}, redirectTime);
-					//will call the function after 2 secs
+					
 
 				}
 
@@ -132,38 +136,20 @@ $(document).ready(function() {
 
 	$('#createAcctSubmit').click(function() {
 
-		//.alert("SWAGNESS");
-
 		email = $('#emailBox').val();
 
 		code = $('#codeBox').val();
 
-		//window.alert(code);
-
-		//window.alert(email);
-
 		firstName = $('#fName').val();
-
-		//window.alert(firstName);
 
 		lastName = $('#lName').val();
 
-		//window.alert(lastName);
-
 		password = $('#pw').val();
-
-		//window.alert(password);
 
 		passwordConfirmed = $('#pwc').val();
 
-		//window.alert(passwordConfirmed);
-
 		schedule = $('#schedule').val();
-
-		//window.alert(schedule);
-
-		//window.alert(email + "  " + code + "  " + password + "  " + passwordConfirmed + "  " + firstName + "  " + lastName + "  " + schedule);
-
+		
 		if ((email == '') || (firstName == '') || (lastName == '') || (password == '') || (passwordConfirmed == '') || (schedule == '')) {
 
 			$('#createAcctStatus').html('Please fill out all fields!');
@@ -178,8 +164,6 @@ $(document).ready(function() {
 
 			createUser(email, code, password, passwordConfirmed, firstName, lastName, schedule).success(function(data) {
 
-				//window.alert(data);
-
 				$('#createAcctStatus').html(data);
 
 				if (data.indexOf('success')){
@@ -187,20 +171,20 @@ $(document).ready(function() {
 					
 					setTimeout(function() {
 						window.location.href = "index.html";
-						//will redirect to your blog page (an ex: blog.html)
+						
 					}, redirectTime);
-					//will call the function after 2 secs.
+					
 
 				}
 
 			}).error(function(xhr, textStatus, errorThrown) {
-				//window.alert("SWAG1");
+				
 
 				$('#createAcctStatus').html(textStatus);
 
 			});
 
-			//window.alert("SWAG");
+		
 
 		}
 
@@ -218,9 +202,9 @@ $(document).ready(function() {
 			
 			setTimeout(function() {
 						window.location.href = "index.html";
-						//will redirect to your blog page (an ex: blog.html)
+						
 					}, redirectTime);
-					//will call the function after 2 secs
+					
 			
 
 		}).error(function(xhr, textStatus, errorThrown) {
@@ -265,9 +249,6 @@ $(document).ready(function() {
 
 		price = parseFloat(price);
 
-		window.alert(ISBN);
-		window.alert(price);
-
 		if (isNaN(ISBN) && isNaN(price)) {
 
 			ISBN = '';
@@ -301,9 +282,9 @@ $(document).ready(function() {
 				
 				setTimeout(function() {
 						window.location.href = "index.html";
-						//will redirect to your blog page (an ex: blog.html)
+						
 					}, redirectTime);
-					//will call the function after 2 secs
+					
 				
 
 			}).error(function(xhr, textStatus, errorThrown) {
@@ -320,26 +301,19 @@ $(document).ready(function() {
 	
 	$("#deleteAcct").click(function() {	
 		
-		//window.alert("SWAG");	
-
 		deleteUser().success(function(data) {
-			
-			//window.alert("SWAG1");
 			
 			$('#AccountStatus').html(data);
 			
 			document.cookie = "loggedIn=0";
 			
 			setTimeout(function() {
-						window.location.href = "index.html";
-						//will redirect to your blog page (an ex: blog.html)
+						window.location.href = "index.html";						
 					}, redirectTime);
-					//will call the function after 2 secs
+					
 
 		}).error(function(xhr, textStatus, errorThrown) {
 			
-			//window.alert("SWAG2");
-
 			$('#AccountStatus').html(textStatus);
 
 		});
@@ -365,9 +339,8 @@ $(document).ready(function() {
 				
 				setTimeout(function() {
 						window.location.href = "index.html";
-						//will redirect to your blog page (an ex: blog.html)
-					}, redirectTime);
-					//will call the function after 2 secs
+						
+					}, redirectTime);				
 				
 
 			}).error(function(xhr, textStatus, errorThrown) {
@@ -380,7 +353,8 @@ $(document).ready(function() {
 
 		return false;
 
-	});
+	});		
+	
 	
 
 });
@@ -405,6 +379,31 @@ function parseListingResults(someData) {
 			var listing = "<div class = 'listing' id = 'listingNumber" + (i + 1) + "'>" + "<p class = listingID>" + myJSON[i]["listingID"] + "</p>" + "<p class = price>" + myJSON[i]["price"] + "</p>" + "<p class = isNegotiable>" + myJSON[i]["isNegotiable"] + "</p>" + "<p class = description>" + myJSON[i]["description"] + "</p>" + "<p class = ISBN>" + myJSON[i]["ISBN"] + "</p>" + "<p class = title>" + myJSON[i]["title"] + "</p>" + "<p class = author>" + myJSON[i]["author"] + "</p>" + "<p class = publisher>" + myJSON[i]["publisher"] + "</p>" + "<p class = uscbEmail>" + myJSON[i]["uscbEmail"] + "</p>" + "<p class = fName>" + myJSON[i]["fName"] + "</p>" + "<p class = lName>" + myJSON[i]["lName"] + "</p>" + "<p class = schedule>" + myJSON[i]["schedule"] + "</p>" + "</div>";
 
 			$('#listingContainer').append(listing);
+
+		} // end for
+
+	} // end else
+
+}
+
+function parseListingResultsForUser(someData) {
+
+	$("#listingContainerForUser").empty();
+
+	var myJSON = IsJsonString(someData);
+
+	if (!myJSON) {
+
+		$("#listingContainerForUser").append("<p> " + someData + " </p>");
+
+	} else {
+
+		for (var i = 0; i < myJSON.length; i++) {
+			
+			var listing = "<div class = 'listing' id = 'listingID" + myJSON[i]["listingID"]  + "'>" + "<p class = price>" + myJSON[i]["price"] + "</p>" + "<p class = isNegotiable>" + myJSON[i]["isNegotiable"] + "</p>" + "<p class = description>" + myJSON[i]["description"] + "</p>" + "<p class = ISBN>" + myJSON[i]["ISBN"] + "</p><button onclick = 'deleteUserListing(this.id)' class = 'deleteListing' id = '" + myJSON[i]["listingID"] +"'> Delete Listing </button></div>";
+
+						
+			$('#listingContainerForUser').append(listing);
 
 		} // end for
 
@@ -468,26 +467,21 @@ function verifyUser() {
 
 function setOptions(){
 	
-	//window.alert("SWAG");
-	
 	var isLoggedIn = getCookie("loggedIn");
-	
-	//window.alert(isLoggedIn);
 	
 	$('#userOptions').empty();
 	
 	if(isLoggedIn == 1){
 		
-	//	window.alert("!");
-		
-		var nav =  '<li id = "sell"><a href="create_listing.html">Sell</a></li><li id = "settings" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Account Settings <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="editAccount.html">Edit Schedule</a></li><li><a href="editListings.html">Your Listings</a></li></ul><li><a id = "logOut" href="#logout-modal" data-toggle="modal" data-target="#logout-modal">Log Out</a></li></li>';
+			
+		var nav =  '<li id = "sell"><a href="create_listing.html">Sell</a></li><li id = "settings" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Account Settings <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="editAccount.html">Edit Account</a></li><li><a href="editListings.html">Your Listings</a></li></ul><li><a id = "logOut" href="#logout-modal" data-toggle="modal" data-target="#logout-modal">Log Out</a></li></li>';
             
             $('#userOptions').append(nav);
 		
 	}
 	else{
 		
-		//window.alert("???");
+		
 		
 		var nav = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Register/Login <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Register</a></li><li><a href="#login-modal" data-toggle="modal" data-target="#login-modal">Log In</a></li><li><a href="#password-modal" data-toggle="modal" data-target="#password-modal">Forgot Password</a></li></ul></li>';
             
@@ -501,4 +495,46 @@ function initializeModals(){
 	
 	$("#modalList").load("modals.html");
 	
+}
+
+function populateListingsForUser(){
+	
+	if(getCookie("loggedIn") == 1){
+		
+		getUserListings().success(function(data) {			 
+			
+			parseListingResultsForUser(data);
+			
+
+		}).error(function(xhr, textStatus, errorThrown) {			
+			
+			parseListingResultsForUser(textStatus);
+
+		});
+		
+	}		
+		
+	}
+
+function deleteUserListing(id){
+	
+	
+	 var listingToDelete = id;
+ 	
+	 id = parseInt(id);
+	 
+	 
+	 deleteListing(id).success(function(data) {			
+		 
+		$('#listingID' + id).remove();
+			
+
+		}).error(function(xhr, textStatus, errorThrown) {
+
+			window.alert(textStatus);			
+			
+
+		});
+		
+		
 }

@@ -20,7 +20,7 @@ if ($email && $password && !$theUser) {
 	//user account does not exist
 	if (!$emailID) {
 
-		echo '1 Error with username or password. Please re-enter credentials to log in.';
+		echo 'Error with username or password. Please re-enter credentials to log in.';
 
 	} else {
 
@@ -28,7 +28,7 @@ if ($email && $password && !$theUser) {
 
 		if (!$userToLogIn) {
 
-			echo ' 2 Error with username or password. Please re-enter credentials to log in.';
+			echo 'Error with username or password. Please re-enter credentials to log in.';
 
 		} else {
 			
@@ -47,7 +47,7 @@ if ($email && $password && !$theUser) {
 
 			} else {
 
-				echo '3 Error with username or password. Please re-enter credentials to log in.';
+				echo 'Error with username or password. Please re-enter credentials to log in.';
 
 			}
 
