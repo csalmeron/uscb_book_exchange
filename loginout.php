@@ -28,7 +28,7 @@ if ($email && $password && !$theUser) {
 
 		if (!$userToLogIn) {
 
-			echo ' Error with username or password. Please re-enter credentials to log in.';
+			echo 'Error with username or password. Please re-enter credentials to log in.';
 
 		} else {
 			
@@ -73,7 +73,7 @@ if ($email && $password && !$theUser) {
 	}
 } else {
 	
-	//currently do nothing. do not return stuff
+	echo 'Please Log in or register with us!';
 }
 
 

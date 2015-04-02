@@ -12,6 +12,8 @@ $theSchedule = isset($_POST['schedule']);
 
 $theUser = isset($_SESSION['user']);
 
+//echo $email . " 1 " . $emailHash . " 2 " . $password . " 3 " . $passwordConfirm . " 4 " . $theFirstName . " 5 " . $theLastName . " 6 " . $theSchedule . " 7 " . $theUser;
+
 if ($email && $emailHash && $password && $passwordConfirm && $theFirstName && $theLastName && !$theUser) {
 
 	$email = $_POST['email'];
@@ -75,7 +77,7 @@ if ($email && $emailHash && $password && $passwordConfirm && $theFirstName && $t
 
 							if ($dbh -> insertUser($newUser)) {
 
-								echo ' Account successfully created. Please log in to continue.';
+								echo 'Account successfully created. Please log in to continue.';
 
 							} else {
 

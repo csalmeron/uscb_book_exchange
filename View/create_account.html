@@ -22,6 +22,9 @@
     <script src="js/ajax.js"></script>
     <script src="js/eventHandlers.js"></script>
     <script>
+    
+    	//script to evalute if the user belongs on this page or not. if they didnt click the get request via email, THEY DONT BELONG!
+    	//get off my page BITCH!
     	
     	$(document).ready(function(){
     		
@@ -43,6 +46,13 @@
     		
     		$('#emailText').html("You may now create an account with your USCB email: " + email);
     		$('#emailBox').val(email);
+    		$('#codeBox').val(code);
+    		
+    		if((code  == undefined) || (email == undefined) || (code  == '') || (email == '')){
+    			
+    			window.location.href = "index.html";
+    			
+    		}
     	});   	
     	
     </script>
@@ -58,15 +68,19 @@
         
           <div class="jumbotron">
           <p id = "emailText" >You may now create an account with your USCB email:</p>
-            <form>
+            <!-- <form> -->
               <div class="form-group">
               	<input id = "emailBox" type="name" class="form-control" readonly value="">
-                <input type="name" class="form-control" placeholder="Enter First Name">
-                <input type="name" class="form-control" placeholder="Enter Last Name">
-                <input type="password" class="form-control" placeholder="Create Password">
+              	<input id = "codeBox" type="name" class="form-control" readonly value="">
+                <input id = "fName" type="name" class="form-control" placeholder="Enter First Name">
+                <input id = "lName" type="name" class="form-control" placeholder="Enter Last Name">
+                <input id = "pw" type="password" class="form-control" placeholder="Create Password">
+                <input id = "pwc" type="name" class="form-control" placeholder="Confirm Password">
+                <textarea id = 'schedule' placeholder='schedule'></textarea>
               </div>
-              <button type="submit" class="btn btn-default">Register</button>
-            </form>
+              <button id = "createAcctSubmit" type="submit" class="btn btn-default" >Create Account</button>
+            <!-- </form> -->
+            <p id = "createAcctStatus"> </p>
           </div>  
         </div>
       </div>

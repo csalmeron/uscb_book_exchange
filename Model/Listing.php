@@ -144,21 +144,6 @@ function printlisting(){
 	
 }
 
-
-// Tremaine Functions
-function aggregateBooks()
-{
-	// aggregate the books together
-} // end aggregateBooks function
-
-function findAndJoinListings()
-{
-	//takes ISBNs and runs a join between listing and books
-	// SELECT * FROM listing LEFT JOIN book ON listing.ISBN
-	// WHERE listing.ISBN = (listOfISBNs). if error or nothing
-	// return false
-} // end findAndJoinListings function
-// end Tremaine Functions
 	
 }	//end class listing
 	

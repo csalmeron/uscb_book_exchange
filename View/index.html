@@ -35,21 +35,22 @@
         <!-- Left Header tabs -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+						<li class = "active">
+							<a href = "index.html"> Home </a>
+						</li>
+						<li>
+							<a href="about.html"> About</a>
+						</li>
+						<li>
+							<a href="contact.html"> Contact</a>
+						</li>
+						<li>
+							<a href="FAQ.html">FAQ<span class="sr-only">(current)</span></a>
+						</li>
+					</ul>          
           <!-- Right Header tabs - account -->
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Register/Login <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Register</a></li>
-                <li><a href="#login-modal" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                <li><a href="#password-modal" data-toggle="modal" data-target="#password-modal">Forgot Password</a></li>
-              </ul>
-            </li>
-            <li><a href="create_listing.html">Sell</a></li>
+          <ul class="nav navbar-nav navbar-right" id = "userOptions">           
+           
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -65,12 +66,12 @@
                         <h3>"Lorem ipsum dolor sit amet,</h3>
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <form class="navbar-form navbar-left" role="search">
+                                <!-- <form class="navbar-form navbar-left" role="search"> -->
                                   <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search for Book ...">
+                                    <!-- <input type="text" class="form-control" placeholder="Search for Book ..."> -->
                                   </div>
-                                  <button type="submit" id="searchButton" class="btn btn-default">Search</button>
-                                </form>
+                                 <a href="search_listings.html"><button id="searchButton" class="btn btn-default">Search Listings!</button></a>
+                                <!-- </form> -->
                             </li>
                         </ul>
                     </div>
@@ -114,8 +115,8 @@
             </div>
         </div>
     </section>
-
-    <!-- Register Modal -->
+    
+       <!-- Register Modal -->
     <div class="modal fade" id="register-modal" role="dialog" >
         <div class="modal-dialog">
             <div class="modal-content">
@@ -126,8 +127,7 @@
                     <!-- <p>Already have an account? <a href="#login-modal" data-toggle="modal" data-target="#login-modal">click here</a></p> -->
                     <!-- <form role="form" action="" id = "registerForm"> -->
                         <input id = "emailRegister" type="email" name="email" placeholder="Enter USCB Email" class="input-xlarge"><br>
-                        <button type="submit" id ='registerSubmit'>Register</button>
-                        <button type="button" data-dismiss="modal">Close</button>
+                        <button type="submit" id ='registerSubmit'>Register</button>                       
                     <!-- </form> -->
                 </div>
                 <div class="modal-footer">
@@ -149,8 +149,7 @@
                     <!-- <form role="form" action=""> -->
                         <input id = "emailLogin" type="email" name="email" placeholder="Enter USCB Email"><br>
                         <input id = "passwordLogin" type="password" name="password" placeholder="Enter Password"><br>
-                        <button type="submit" class="btn btn-default" id ='loginSubmit'>Log In</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-default" id ='loginSubmit'>Log In</button>                      
                     <!-- </form> -->
                 </div>
                 <div class="modal-footer">
@@ -174,8 +173,7 @@
                         <input id="passwordFP" type="password" name="password" placeholder="Enter Password"><br>
                         <input id="passwordConfirmFP" type="password" name="passwordConfirm" placeholder="Re-Enter Password"><br>
                         <button type="button" id ='passwordSubmit'>Request Reset</button>
-                        <button type="button" data-dismiss="modal">Close</button>
-                    <!-- </form> -->
+                      <!-- </form> -->
                 </div>
                 <div class="modal-footer">
                     <p id = "FPStatus"></p>
@@ -183,6 +181,24 @@
             </div>
         </div>
     </div>
+    
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logout-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <h2>Log Out</h2>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Remember Password? <a href="#login-modal" data-toggle="modal" data-target="#register-modal">click here</a></p> -->
+                    <!-- <form role="form" action=""> -->
+                        <p id = "logOutStatus"> Please Log In. </p>
+                    <!-- </form> -->
+                </div>                             
+            </div>
+        </div>
+    </div>
+ 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
