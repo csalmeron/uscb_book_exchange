@@ -25,37 +25,38 @@ if ($email && $emailHash && $password && $passwordConfirm && $theFirstName && $t
 
 	if (Email::hashEmailOrPassword($email) == $emailHash) {
 
-		$dbh = new DB();
+		if (Password::comparePassword($password, $passwordConfirm)) {
 
-		$emailID = $dbh -> getEmailIDByEmailName($email);
+			if (Password::isGoodPassword($password)) {
 
-		//verify the user does not already exist
-		if (!$emailID) {
-
-			//email does not exist, so attempt to insert the email into the DB
-			if ($dbh -> insertEmail($email)) {
+				$dbh = new DB();
 
 				$emailID = $dbh -> getEmailIDByEmailName($email);
 
+				//verify the user does not already exist
 				if (!$emailID) {
 
-					echo ' an error occured!';
+					//email does not exist, so attempt to insert the email into the DB
+					if ($dbh -> insertEmail($email)) {
 
-				} else {
+						$emailID = $dbh -> getEmailIDByEmailName($email);
 
-					if ($theSchedule) {
+						if (!$emailID) {
 
-						$theSchedule = $_POST['schedule'];
+							echo ' an error occured!';
 
-					} else {
+						} else {
 
-						$theSchedule = NULL;
+							if ($theSchedule) {
 
-					}
+								$theSchedule = $_POST['schedule'];
 
-					if (Password::comparePassword($password, $passwordConfirm)) {
+							} else {
 
-						if (Password::isGoodPassword($password)) {
+								$theSchedule = NULL;
+
+							}
+							//HERE
 
 							//password is validated, so hash the password to upload into the DB
 							$hashedPW = Password::hashPassword($password);
@@ -85,32 +86,33 @@ if ($email && $emailHash && $password && $passwordConfirm && $theFirstName && $t
 
 							}
 
-						} else {
-
-							echo 'password does not fit requirements!';
-
 						}
-					}//end if
 
-					else {
+					} else {
 
-						echo 'passwords do not match!';
+						echo ' an error occured trying to create your account!';
 
 					}
+				}//end if
+				else {
 
-				}
+					echo ' The user already exists!';
+
+				}//end else
 
 			} else {
 
-				echo ' an error occured trying to create your account!';
+				echo 'password does not fit requirements!';
 
 			}
 		}//end if
+
 		else {
 
-			echo ' The user already exists!';
+			echo 'passwords do not match!';
 
-		}//end else
+		}
+
 	}//end if
 
 	else {

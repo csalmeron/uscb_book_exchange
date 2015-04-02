@@ -166,7 +166,7 @@ $(document).ready(function() {
 
 				$('#createAcctStatus').html(data);
 
-				if (data.indexOf('success')){
+				if (data.indexOf('success') != -1){
 
 					
 					setTimeout(function() {

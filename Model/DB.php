@@ -13,7 +13,7 @@ function __construct(){
 	
 	//set up connection strings and stuff for a PDO object and return the PDO object
 	
-	$this->dsn = 'mysql:dbname=uscbtextbookexchange;host=127.0.0.1';
+	$this->dsn = 'mysql:dbname=uscbtextbookexchange2;host=127.0.0.1';
 	$this->user = 'root';
 	$this->password = '';
 	
