@@ -1,7 +1,10 @@
 <?php
 
 
+
+
 require_once 'Model/theModel.php';
+
 
 $listingID = isset($_POST['listingID']);
 $theUser = isset($_SESSION['user']);
@@ -39,7 +42,7 @@ else
 	 {
 	
 	echo ' please log in to continue';
-	
+
    }
 
 

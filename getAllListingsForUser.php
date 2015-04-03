@@ -1,4 +1,4 @@
-<?php
+
 require_once 'Model/theModel.php';
 
 
@@ -37,5 +37,6 @@ if ($user && $listing) {
 }//end if statement
 else {
 	echo 'user needs to log in to view this information';
+
 }
 ?>
