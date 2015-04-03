@@ -212,4 +212,4 @@ if ($ISBN && $title && $subject && $author && $publisher && $price && $isNegotia
 	echo 'Please complete all fields!';
 }
 ?>
->>>>>>> ea3e56685461c705b063acb6c5bc59d3879c6192
+

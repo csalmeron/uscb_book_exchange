@@ -30,27 +30,30 @@
             <span class="icon-bar"></span>
           </button>
           <!-- Logo will be inserted here -->
-          <a class="navbar-brand" href="#">USCB Book Exchange</a>
+          <a class="navbar-brand" href="index.html">USCB Book Exchange</a>
         </div>
         <!-- Left Header tabs -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-            <li class="active"><a href="#">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+						<li>
+							<a href = "index.html"> Home </a>
+						</li>
+						<li class = "active">
+							<a href="about.html"> About</a>
+						</li>
+						<li>
+							<a href="contact.html"> Contact</a>
+						</li>
+						<li>
+							<a href="FAQ.html">FAQ<span class="sr-only">(current)</span></a>
+						</li>
+					</ul>
           <!-- Right Header tabs - account -->
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Register/Login <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Register</a></li>
-                <li><a href="#login-modal" data-toggle="modal" data-target="#login-modal">Login</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Sell</a></li>
+          <ul class="nav navbar-nav navbar-right" id = "userOptions">           
+           
           </ul>
         </div><!-- /.navbar-collapse -->
+          
       </div><!-- /.container-fluid -->
     </nav>
     
@@ -63,7 +66,7 @@
                     <div class="clearfix"></div>
                     <h2>About </h2>
                     
-                    <p>The USCB Textbook Exchange website is comprised of a server-side web service and a client-side web service which allow students to have a facilitated experience while attempting to donate, exchange, and/or sell their books with other students. </p>
+                    <p>The USCB Textbook Exchange website is a client-to-server application which allows students to have a facilitated experience while attempting to exchange/sell their books with other students. </p>
                 </div>
             </div>
         </div>
@@ -85,23 +88,23 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Register Modal -->
-    <div class="modal fade" id="register-modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="register-modal" role="dialog" >
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-title">
                     <h2>Register</h2>
                 </div>
                 <div class="modal-body">
-                    <p>Already have an account? <a href="#">click here</a></p>
-                    <form role="form" action="">
-                        <input type="email" name="email" placeholder="Enter USCB Email" class="input-xlarge"><br>
-                        <button type="submit">Submit</button>
-                    </form>
+                    <!-- <p>Already have an account? <a href="#login-modal" data-toggle="modal" data-target="#login-modal">click here</a></p> -->
+                    <!-- <form role="form" action="" id = "registerForm"> -->
+                        <input id = "emailRegister" type="email" name="email" placeholder="Enter USCB Email" class="input-xlarge"><br>
+                        <button type="submit" id ='registerSubmit'>Register</button>                       
+                    <!-- </form> -->
                 </div>
                 <div class="modal-footer">
-                    <p>If the email entered is a valid USCB email a confirmation link will be sent.</p>
+                    <p id = "registerStatus"></p>
                 </div>
             </div>
         </div>
@@ -115,23 +118,66 @@
                     <h2>Account Sign-In</h2>
                 </div>
                 <div class="modal-body">
-                    <p>Don't have an account? <a href="#">click here</a></p>
-                    <form role="form" action="">
-                        <input type="email" name="email" placeholder="Enter USCB Email"><br>
-                        <input type="password" name="password" placeholder="Enter Password"><br>
-                        <button type="submit">Submit</button>
-                    </form>
+                    <!-- <p>Don't have an account?<a href="#register-modal" data-toggle="modal" data-target="#register-modal">click here</a></p> -->
+                    <!-- <form role="form" action=""> -->
+                        <input id = "emailLogin" type="email" name="email" placeholder="Enter USCB Email"><br>
+                        <input id = "passwordLogin" type="password" name="password" placeholder="Enter Password"><br>
+                        <button type="submit" class="btn btn-default" id ='loginSubmit'>Log In</button>                      
+                    <!-- </form> -->
                 </div>
                 <div class="modal-footer">
-                    <p>Forgot Password? <a href="#">click here</a></p>
-                </div>
+                    <p id = "loginStatus"></p>
+                </div> 
             </div>
         </div>
     </div>
     
+     <!-- Forgot Password Modal -->
+    <div class="modal fade" id="password-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <h2>Forgot Password?</h2>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Remember Password? <a href="#login-modal" data-toggle="modal" data-target="#register-modal">click here</a></p> -->
+                    <!-- <form role="form" action=""> -->
+                        <input id="emailFP" name="email" placeholder="Enter USCB Email"><br>
+                        <input id="passwordFP" type="password" name="password" placeholder="Enter Password"><br>
+                        <input id="passwordConfirmFP" type="password" name="passwordConfirm" placeholder="Re-Enter Password"><br>
+                        <button type="button" id ='passwordSubmit'>Request Reset</button>
+                      <!-- </form> -->
+                </div>
+                <div class="modal-footer">
+                    <p id = "FPStatus"></p>
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logout-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <h2>Log Out</h2>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Remember Password? <a href="#login-modal" data-toggle="modal" data-target="#register-modal">click here</a></p> -->
+                    <!-- <form role="form" action=""> -->
+                        <p id = "logOutStatus"> Please Log In. </p>
+                    <!-- </form> -->
+                </div>                             
+            </div>
+        </div>
+    </div>
+
+        
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/eventHandlers.js"></script>
   </body>
 </html>
