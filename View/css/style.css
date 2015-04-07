@@ -15,3 +15,6 @@ body {
     text-align: center;
     background-color: rgb(230,230,230);
 }
+.clearfix {
+	text-align: center;
+}
