@@ -1,14 +1,14 @@
 p {
-	color: rgb(160,160,0);
+	color: rgb(0,0,0);
 }
 h3 {
-	color: rgb(130,130,0);
+	color: #74B84B;
 }
 h2 {
 	color: #74B84B;
 }
 h1 {
-	color: rgb(70,70,0);
+	color: #74B84B;
 }
 body {
     padding-top: 50px;
@@ -17,4 +17,7 @@ body {
 }
 .clearfix {
 	text-align: center;
+}
+SearchButton{
+	color: #74B84B;
 }
