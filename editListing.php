@@ -72,9 +72,9 @@ $listingID= isset($_POST['listingID']);
 	 	
 			echo 'listing updated sucessfully';	
 		
-	 		}
 	 
-	}//end else
+			}			//end else
+		}//end else
 }// end if 
 
 else 

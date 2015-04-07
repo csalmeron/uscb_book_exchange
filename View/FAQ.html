@@ -8,7 +8,8 @@
 		<title>USCB Book Exchange</title>
 
 		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+   		<link href="css/style.css" rel="stylesheet" type="text/css">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,7 +20,7 @@
 	</head>
 	<body>
 		<!-- Sticky Header Nav Bar -->
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -47,6 +48,9 @@
 						<li class = "active">
 							<a href="FAQ.html">FAQ<span class="sr-only">(current)</span></a>
 						</li>
+						<li>
+                      		<a href="search_listings.html">Search Listings!</a>
+                     	</li>
 					</ul>
 					<!-- Right Header tabs - account -->
 					<ul class="nav navbar-nav navbar-right" id = "userOptions">           
@@ -59,7 +63,7 @@
 		<!-- FAQ title -->
 		<section class="container-fluid">
 			<div class="row">
-				<div class="col-lg-6 col-offset-3 text-center">
+				<div class="col-md-1">
 					<h2>FAQ </h2>
 				</div>
 			</div>
@@ -68,32 +72,75 @@
 		<!-- first column -->
 		<section class="container-fluid">
 			<div class="row">
-				<div class="col-md-6">
-					<h2>Question 1 </h2>
-					<bold>
-						Instructions for question 1 go here
-					</bold>
-					<h2>Question 3 </h2>
-					<bold>
-						Instructions for question 3 go here
-					</bold>
-					<h2>Question 5 </h2>
-					<bold>
-						Instructions for question 5 go here
-					</bold>
-
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+					<h2 class="text-center"> How do I Register? </h2>
+					
+					<body class="text-center"><strong>	You first need to click the Register/Login button.
+														After clicking the Register/Login button you would
+														click the Register button. Once on the Register page,
+														enter the information that is needed for registering.
+														Once it is completed it will send you an email to the
+														email you provided. Check the spam box if you do not 
+														see the email and once you find it click the link to 
+														confirm. It will then direct you to the home page so 
+														you can login from the Login Button. </strong></body>					
+					</div>
+					
+					<div class = "row">
+					<h2 class="text-center">How do I log in? </h2>
+					
+					
+					<body class="text-center">	<strong> You first need to register an account, once you register
+														 an account you can then click the Login button and click
+														 Login. You will then be prompted to fill out the required 
+														 fields. After hitting submit it will automatically direct 
+														 you to the Home Page. </strong></body>
+					</div>
+					
+					<div class = "row">
+					<h2 class = "text-center">How do I verify my email? </h2>
+					
+					<body class="text-center">	<strong> To verify your email you need to go to the designated email
+														 address that you assigned your account to. Once you Login to 
+														 your email address you can check your inbox. Once you find the
+														 confirmation email click the link then it will register your
+														 account and redirect you to the homepage. </strong></body>
+				  
+				</div>
 				</div>
 				<!-- second column -->
-				<div class="col-md-6">
+				<div class="col-md-4 col-md-offset-1">
+					<div class ="row">
 
-					<h2>Question2</h2>
-					<bold>
-						Instructions for question 2 go here
-					</bold>
-					<h2>Question 4 </h2>
-					<bold>
-						Instructions for question 4 go here
-					</bold>
+					<h2 class="text-center">How do I sell a book?</h2>
+					
+					<body class="text-center"><strong>	To sell a book all you need to do is to have a registered
+												account and then Login to your account. Once you login to 
+												your account you can then click the sell button. After you 
+												fill out the listing form to list the book it will then be
+												published to the Listings page for other users to view and
+												buy the book of their choosing.</strong></body>
+					</div>
+					
+					<div class = "row">
+					<h2 class="text-center">How do I edit my account?</h2>
+					
+					<body class="text-center"><strong>  To edit account you must first be logged in.
+												Once your logged in you can hit the edit profile button.
+												From there you can change any profile settings that you want.
+												 </strong> </body>
+					</div>
+					
+					<div class = "row">							 
+												 <h2 class="text-center">How do I delete my account?</h2>
+					
+					<body class="text-center"><strong>  To delete account you must first be logged in.
+												Once your logged in you can hit the edit profile button.
+												From there you can click the delete account button and confirm
+												that you want to be deleted.
+												 </strong> </body>
+					</div>
 				</div>
 			</div>
 
@@ -108,8 +155,8 @@
 			<!--  </div> ->
 			<!--  </div> -->
 		</section>
-
-		 <!-- Register Modal -->
+		
+		<!-- Register Modal -->
     <div class="modal fade" id="register-modal" role="dialog" >
         <div class="modal-dialog">
             <div class="modal-content">
@@ -191,7 +238,7 @@
             </div>
         </div>
     </div>
- 
+
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
