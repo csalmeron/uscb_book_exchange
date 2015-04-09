@@ -1,17 +1,18 @@
 p {
-	color: rgb(160,160,0);
-}
+	color:  #000000;
 h3 {
-	color: rgb(130,130,0);
+	color:  #0E8C3A;
 }
 h2 {
-	color: rgb(100,100,0);
+	color:  #0E8C3A;
 }
 h1 {
-	color: rgb(70,70,0);
+		color:  #0E8C3A;
+		text-align: center;
+
 }
 body {
     padding-top: 50px;
     text-align: center;
-    background-color: rgb(230,230,230);
+    /*background-color: rgb(230,230,230);*/
 }
