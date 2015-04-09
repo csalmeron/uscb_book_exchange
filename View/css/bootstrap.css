@@ -14,6 +14,8 @@ body {
     padding-top: 50px;
     text-align: center;
   	margin: 0;
+    background-color: rgb(230,230,230);
+
 }
 article,
 aside,
@@ -1092,6 +1094,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
+  text-align: center;
   background-color: #fff;
 }
 input,
@@ -1101,6 +1104,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  background-color: red;
 }
 a {
   color: #337ab7;
@@ -4869,7 +4873,9 @@ a.badge:focus {
   background-color: #eee;
 }
 .jumbotron h1,
-.jumbotron .h1 {
+.jumbotron .h1 ,
+.jumbotron h2,
+.container h3{
   color: #0E8C3A;
   text-align: center
 }
