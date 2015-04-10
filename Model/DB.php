@@ -13,9 +13,9 @@ function __construct(){
 	
 	//set up connection strings and stuff for a PDO object and return the PDO object
 	
-	$this->dsn = 'mysql:dbname=usbtextbookexchange2;host=127.0.0.1';
-	$this->user = 'root';
-	$this->password = '';
+	$this->dsn = 'mysql:host=127.0.0.1;dbname=usedbook;port=3306';
+	$this->user = 'usedbook';
+	$this->password = 'awCVG9f4Vv3C4ArU';
 	
 	try {
 		
