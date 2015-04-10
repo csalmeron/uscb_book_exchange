@@ -400,7 +400,7 @@ function parseListingResultsForUser(someData) {
 
 		for (var i = 0; i < myJSON.length; i++) {
 			
-			var listing = "<div class = 'listing' id = 'listingID" + myJSON[i]["listingID"]  + "'>" + "<p class = price>" + myJSON[i]["price"] + "</p>" + "<p class = isNegotiable>" + myJSON[i]["isNegotiable"] + "</p>" + "<p class = description>" + myJSON[i]["description"] + "</p>" + "<p class = ISBN>" + myJSON[i]["ISBN"] + "</p><button onclick = 'deleteUserListing(this.id)' class = 'deleteListing' id = '" + myJSON[i]["listingID"] +"'> Delete Listing </button></div>";
+			var listing = "<div class = 'listing' id = 'listingID" + myJSON[i]["listingID"]  + "'>" + "<p class = price>" + myJSON[i]["price"] + "</p>" + "<p class = isNegotiable>" + myJSON[i]["isNegotiable"] + "</p>" + "<p class = description>" + myJSON[i]["description"] + "</p>" + "<p class = ISBN>" + myJSON[i]["ISBN"] + "</p><button onclick = 'deleteUserListing(this.id)' class = 'btn btn-default' id = '" + myJSON[i]["listingID"] +"'> Delete Listing </button></div>";
 
 						
 			$('#listingContainerForUser').append(listing);
