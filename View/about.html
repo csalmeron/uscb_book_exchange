@@ -8,7 +8,8 @@
     <title>USCB Book Exchange</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,7 +20,7 @@
   </head>
   <body>
     <!-- Sticky Header Nav Bar -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -47,6 +48,9 @@
 						<li>
 							<a href="FAQ.html">FAQ<span class="sr-only">(current)</span></a>
 						</li>
+						<li>
+                      		<a href="search_listings.html">Search Listings!</a>
+                     	</li>
 					</ul>
           <!-- Right Header tabs - account -->
           <ul class="nav navbar-nav navbar-right" id = "userOptions">           
@@ -62,11 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2>About </h2>
                     
-                    <p>The USCB Textbook Exchange website is a client-to-server application which allows students to have a facilitated experience while attempting to exchange/sell their books with other students. </p>
                 </div>
             </div>
         </div>
@@ -79,6 +79,9 @@
                 <div class="col-md-12">
                     <div class="jumbotron">
                         <h1>About</h1>
+                         <p>The USCB Textbook Exchange website is a client-server application which allows students to have a facilitated experience 
+                    	while attempting to exchange/sell their books with other students. </p>
+                    	
                         <p>The USCB Textbook Exchange website is comprised of a server-side web service that will consist of a database which will store user and book information in an organized manner and will handle all queries made by the users. Additionally, the web service will generate automated messages to expedite the transaction process.
 	The client-side of the web service will allow the users to interact with the web service. 
 	In order to be able to use the web service the user must have access to a web browser that is capable of supporting the web service.  Additionally, the user identity and student status will be verified through the use of their university email.

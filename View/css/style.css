@@ -1,16 +1,45 @@
 p {
-	color: rgb(160,160,0);
+	color:  #000000;
 }
 h3 {
-	color: rgb(130,130,0);
+	color:  #0E8C3A;
 }
 h2 {
-	color: rgb(100,100,0);
+	color:  #0E8C3A;
 }
 h1 {
-	color: rgb(70,70,0);
+		color:  #0E8C3A;
+		text-align: center;
+
 }
 body {
     padding-top: 50px;
     text-align: center;
+    background-color: rgb(230,230,230);
+}
+
+.listing
+{
+    border-style: solid;
+    border-width: 12px;
+    color: rgb(230,230,230);
+}
+
+#listingContainer{
+	background-color: white;
+}
+#listingContainerForUser{
+	background-color: white;
+}
+.listing p {
+		color:  #0E8C3A;
+		margin-left: 5%;
+		margin-top: 1%;
+}
+
+#emailText{
+			color:  #0E8C3A;
+}
+button .btn .btn-default{
+	margin-left =75%;
 }
