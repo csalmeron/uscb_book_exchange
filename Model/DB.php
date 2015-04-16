@@ -12,10 +12,17 @@ private $dbh;
 function __construct(){
 	
 	//set up connection strings and stuff for a PDO object and return the PDO object
+// <<<<<<< HEAD
+// 	
+	// $this->dsn = 'mysql:host=127.0.0.1;dbname=usedbook;port=3306';
+	// $this->user = 'usedbook';
+	// $this->password = 'awCVG9f4Vv3C4ArU';
+// =======
 	//echo 'swag!';
-	$this->dsn = 'mysql:dbname=uscbtextbookexchange2;host=127.0.0.1';
+	$this->dsn = 'mysql:dbname=usbtextbookexchange2;host=127.0.0.1';
 	$this->user = 'root';
 	$this->password = '';
+//>>>>>>> 1a73db078c6b77e0a0f809bbf611a9c2dc46ce79
 	
 	try {
 		
