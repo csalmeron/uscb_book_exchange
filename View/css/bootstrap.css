@@ -11,7 +11,11 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+    padding-top: 50px;
+    text-align: center;
+  	margin: 0;
+    background-color: rgb(230,230,230);
+
 }
 article,
 aside,
@@ -1090,6 +1094,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
+  text-align: center;
   background-color: #fff;
 }
 input,
@@ -1322,6 +1327,9 @@ mark,
 }
 .text-center {
   text-align: center;
+}
+.text-center h2{
+	color:  #0E8C3A;
 }
 .text-justify {
   text-align: justify;
@@ -1604,8 +1612,10 @@ pre code {
   margin-left: auto;
 }
 .row {
+	
   margin-right: -15px;
   margin-left: -15px;
+  
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
@@ -2586,8 +2596,9 @@ fieldset[disabled] .form-control {
 fieldset[disabled] .form-control {
   cursor: not-allowed;
 }
-textarea.form-control {
+textarea.form-group.form-control {
   height: auto;
+  width: auto;
 }
 input[type="search"] {
   -webkit-appearance: none;
@@ -3473,7 +3484,7 @@ tbody.collapse.in {
 .dropdown-menu > li > a:focus {
   color: #262626;
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: #F0FFF0;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -4518,7 +4529,11 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #fff;
+<<<<<<< HEAD
   background-color: #74B84B;
+=======
+  background-color: #0E8C3A;
+>>>>>>> 1a73db078c6b77e0a0f809bbf611a9c2dc46ce79
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -4862,8 +4877,11 @@ a.badge:focus {
   background-color: #eee;
 }
 .jumbotron h1,
-.jumbotron .h1 {
-  color: inherit;
+.jumbotron .h1 ,
+.jumbotron h2,
+.container h3{
+  color: #0E8C3A;
+  text-align: center
 }
 .jumbotron p {
   margin-bottom: 15px;

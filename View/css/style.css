@@ -1,4 +1,5 @@
 p {
+<<<<<<< HEAD
 	color: rgb(0,0,0);
 }
 h3 {
@@ -9,15 +10,57 @@ h2 {
 }
 h1 {
 	color: #74B84B;
+=======
+	color:  #000000;
+}
+h3 {
+	color:  #0E8C3A;
+}
+h2 {
+	color:  #0E8C3A;
+}
+h1 {
+		color:  #0E8C3A;
+		text-align: center;
+
+>>>>>>> 1a73db078c6b77e0a0f809bbf611a9c2dc46ce79
 }
 body {
     padding-top: 50px;
     text-align: center;
     background-color: rgb(230,230,230);
 }
+<<<<<<< HEAD
 .clearfix {
 	text-align: center;
 }
 SearchButton{
 	color: #74B84B;
+=======
+
+.listing
+{
+    border-style: solid;
+    border-width: 12px;
+    color: rgb(230,230,230);
+}
+
+#listingContainer{
+	background-color: white;
+}
+#listingContainerForUser{
+	background-color: white;
+}
+.listing p {
+		color:  #0E8C3A;
+		margin-left: 5%;
+		margin-top: 1%;
+}
+
+#emailText{
+			color:  #0E8C3A;
+}
+button .btn .btn-default{
+	margin-left =75%;
+>>>>>>> 1a73db078c6b77e0a0f809bbf611a9c2dc46ce79
 }
