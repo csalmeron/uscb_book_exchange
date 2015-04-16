@@ -63,11 +63,11 @@
 
     <!-- Instructions on contacting admin -->
     <section class="content-section">
-        <div class="container">
+        <div class="container" id = "contact-body">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
+                <div class="col-lg-11 col-sm-6">
                     <div class="jumbotron">
-                        <p> For Question and Concerns Please Send Us A email and We Will Resolve The Issue As Soon As Possible. </p>
+                        <h3> For Questions or Concerns, Please Send an Email to uscbtextbook@gmail.com </h3>
                     </div>
                 </div>
             </div>
@@ -78,36 +78,8 @@
     <section class="content-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <form class="form-horizontal" role="form" method="post" action="index.php">
-                        <!-- Sender Name -->
-                        <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
-                            </div>
-                        </div>
-                        <!-- Sender Email -->
-                        <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
-                            </div>
-                        </div>
-                        <!-- Sender Message -->
-                        <div class="form-group">
-                            <label for="message" class="col-sm-2 control-label">Message</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" rows="4" name="message"></textarea>
-                            </div>
-                        </div>
-                        <!-- Submit -->
-                        <div class="form-group">
-                            <div class="col-sm-10 col-sm-offset-2">
-                                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-default">
-                            </div>
-                        </div>
-                    </form>
+                <div class="col-lg-10 col-sm-6">
+                    
                 </div>
             </div>
         </div>
@@ -124,7 +96,7 @@
                     <!-- <p>Already have an account? <a href="#login-modal" data-toggle="modal" data-target="#login-modal">click here</a></p> -->
                     <!-- <form role="form" action="" id = "registerForm"> -->
                         <input id = "emailRegister" type="email" name="email" placeholder="Enter USCB Email" class="input-xlarge"><br>
-                        <button type="submit" id ='registerSubmit'>Register</button>                       
+                        <button type="submit" class="btn btn-default" id ='registerSubmit'>Register</button>                       
                     <!-- </form> -->
                 </div>
                 <div class="modal-footer">
@@ -139,7 +111,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-title">
-                    <h2>Account Sign-In</h2>
+                    <h2>Account Sign In</h2>
                 </div>
                 <div class="modal-body">
                     <!-- <p>Don't have an account?<a href="#register-modal" data-toggle="modal" data-target="#register-modal">click here</a></p> -->
@@ -169,11 +141,11 @@
                         <input id="emailFP" name="email" placeholder="Enter USCB Email"><br>
                         <input id="passwordFP" type="password" name="password" placeholder="Enter Password"><br>
                         <input id="passwordConfirmFP" type="password" name="passwordConfirm" placeholder="Re-Enter Password"><br>
-                        <button type="button" id ='passwordSubmit'>Request Reset</button>
+                        <button type="button" class="btn btn-default" id ='passwordSubmit'>Request Reset</button>
                       <!-- </form> -->
                 </div>
                 <div class="modal-footer">
-                    <p id = "FPStatus"></p>
+                    <p id = "FPStatus">Reminder: Password must consist of 8-12 characters, a capital letter, and a number</p>
                 </div>                
             </div>
         </div>

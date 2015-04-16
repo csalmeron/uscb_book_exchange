@@ -26,9 +26,10 @@ h1 {
 >>>>>>> 1a73db078c6b77e0a0f809bbf611a9c2dc46ce79
 }
 body {
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: center;
     background-color: rgb(230,230,230);
+
 }
 <<<<<<< HEAD
 .clearfix {
@@ -41,26 +42,91 @@ SearchButton{
 .listing
 {
     border-style: solid;
-    border-width: 12px;
+    border-width: 5px;
     color: rgb(230,230,230);
+    background-color: white;
+    padding-bottom: 1%;
+	padding-left:2%;
 }
 
 #listingContainer{
-	background-color: white;
 }
 #listingContainerForUser{
 	background-color: white;
 }
 .listing p {
-		color:  #0E8C3A;
-		margin-left: 5%;
+		margin-left: 2%;
 		margin-top: 1%;
+}
+.listing h3{
+    
+	text-align: left;
 }
 
 #emailText{
 			color:  #0E8C3A;
 }
+<<<<<<< HEAD
 button .btn .btn-default{
 	margin-left =75%;
 >>>>>>> 1a73db078c6b77e0a0f809bbf611a9c2dc46ce79
+=======
+#faq-body,
+#contact-body,
+#about-body{
+	margin-top: 2%;
+}
+.modal-content{
+	text-align: center;
+}
+#emailRegister,
+#registerSubmit,
+#emailLogin,
+#passwordLogin,
+#loginSubmit,
+#passwordSubmit,
+#emailFP,
+#passwordFP,
+#passwordSubmit,
+#passwordConfirmFP{
+	margin-top: 2%;
+}
+#emailBox,
+#codeBox,
+#fName,
+#lName,
+#pw,
+#pwc,
+#schedule,
+#CreateAcctStatus{
+	margin-top: 3%;
+}
+#checkbox-createL{
+	margin-top:1%;
+}
+#index-image{
+	background-image: url(../img/book2.png);
+	height: 525px;
+	width: 100%;
+}
+ul
+{
+    list-style-type: none;
+}
+#homepage-h1{
+	color:white;
+}
+.pageBreak{
+	height: 60px;
+	width:1583;
+	font-size: 2.5em;
+	text-align: center;
+    background-color: #0E8C3A;
+}
+#center-content{
+	padding-bottom:5%;
+}
+ol{
+	text-align:left;
+>>>>>>> e62f4a671f61ade0820ae354cadfafb62c851dee
 }

@@ -62,30 +62,37 @@
     </nav>
     
     <!-- About Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
     <section>
-        <div class="container">
+        <div class="container" id = "about-body">
             <div class="row">
                 <div class="col-md-12">
                     <div class="jumbotron">
                         <h1>About</h1>
-                         <p>The USCB Textbook Exchange website is a client-server application which allows students to have a facilitated experience 
-                    	while attempting to exchange/sell their books with other students. </p>
-                    	
-                        <p>The USCB Textbook Exchange website is comprised of a server-side web service that will consist of a database which will store user and book information in an organized manner and will handle all queries made by the users. Additionally, the web service will generate automated messages to expedite the transaction process.
-	The client-side of the web service will allow the users to interact with the web service. 
-	In order to be able to use the web service the user must have access to a web browser that is capable of supporting the web service.  Additionally, the user identity and student status will be verified through the use of their university email.
-</p>
+                        
+                    	<p>The purpose of this website is to help students find and sell textbooks. 
+                   		This website was designed and developed in spring of 2015 by a group of USCB Computational Science students</p>
+						<p>The USCB Textbook Exchange website is a localized web service for the students at the University of South Carolina Beaufort. The web service connects students who want to 
+							save on textbooks with those who want a shipping free solution. Students have the option to buy, sell, or donate their textbooks. Students can receive payment and textbooks 
+							faster than utilizing a retailer while avoiding shipping costs.</p>
+							
+						<p>Students that want to sell their textbooks have the option to create listings which include the following:
+						book title, author, ISBN, price, publisher, description, seller's schedule, email, and name</p>
+					<div>
+						                    <hr class="section-heading-spacer">
+
+                    <h2>Software Development Team</h2>
+                   
+                   	<ul>
+                   		<li> Tremaine Farris (Project Manager/Lead) </li>
+                   		<li> Cristian Salmeron (Project Manager/Version Control Lead) </li>
+                   		<li> Bill Glesias (Back-end/Database Lead, Front-end assistant, Technical Lead)</li>
+                   		<li> Jonathan Bello (Front-end Lead Designer)</li>
+                   		<li> Ernest White (Associate Back-end Engineer) </li>
+                   		<li> Zachary Adams (Front-end Designer) </li>
+                   		<li> Benton Garrison (Systems Analyst and Front-end Designer)</li>                   		
+                   	</ul>
+                   </div>
+
                     </div>
                 </div>
             </div>
@@ -103,7 +110,7 @@
                     <!-- <p>Already have an account? <a href="#login-modal" data-toggle="modal" data-target="#login-modal">click here</a></p> -->
                     <!-- <form role="form" action="" id = "registerForm"> -->
                         <input id = "emailRegister" type="email" name="email" placeholder="Enter USCB Email" class="input-xlarge"><br>
-                        <button type="submit" id ='registerSubmit'>Register</button>                       
+                        <button type="submit" class="btn btn-default" id ='registerSubmit'>Register</button>                       
                     <!-- </form> -->
                 </div>
                 <div class="modal-footer">
@@ -118,7 +125,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-title">
-                    <h2>Account Sign-In</h2>
+                    <h2>Account Sign In</h2>
                 </div>
                 <div class="modal-body">
                     <!-- <p>Don't have an account?<a href="#register-modal" data-toggle="modal" data-target="#register-modal">click here</a></p> -->
@@ -148,11 +155,11 @@
                         <input id="emailFP" name="email" placeholder="Enter USCB Email"><br>
                         <input id="passwordFP" type="password" name="password" placeholder="Enter Password"><br>
                         <input id="passwordConfirmFP" type="password" name="passwordConfirm" placeholder="Re-Enter Password"><br>
-                        <button type="button" id ='passwordSubmit'>Request Reset</button>
+                        <button type="button" class="btn btn-default" id ='passwordSubmit'>Request Reset</button>
                       <!-- </form> -->
                 </div>
                 <div class="modal-footer">
-                    <p id = "FPStatus"></p>
+                    <p id = "FPStatus">Reminder: Password must consist of 8-12 characters, a capital letter, and a number</p>
                 </div>                
             </div>
         </div>
