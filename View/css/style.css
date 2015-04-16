@@ -13,9 +13,10 @@ h1 {
 
 }
 body {
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: center;
     background-color: rgb(230,230,230);
+
 }
 
 .listing
@@ -77,4 +78,29 @@ body {
 }
 #checkbox-createL{
 	margin-top:1%;
+}
+#index-image{
+	background-image: url(../img/book2.png);
+	height: 525px;
+	width: 100%;
+}
+ul
+{
+    list-style-type: none;
+}
+#homepage-h1{
+	color:white;
+}
+.pageBreak{
+	height: 60px;
+	width:1583;
+	font-size: 2.5em;
+	text-align: center;
+    background-color: #0E8C3A;
+}
+#center-content{
+	padding-bottom:5%;
+}
+ol{
+	text-align:left;
 }
