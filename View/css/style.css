@@ -1,106 +1,84 @@
 p {
-	color:  #000000;
+	color: #000000;
 }
 h3 {
-	color:  #0E8C3A;
+	color: #0E8C3A;
 }
 h2 {
-	color:  #0E8C3A;
+	color: #0E8C3A;
 }
 h1 {
-		color:  #0E8C3A;
-		text-align: center;
-
+	color: #0E8C3A;
+	text-align: center;
 }
 body {
-    padding-top: 20px;
-    text-align: center;
-    background-color: rgb(230,230,230);
-
+	padding-top: 20px;
+	text-align: center;
+	background-color: rgb(230,230,230);
 }
 
-.listing
-{
-    border-style: solid;
-    border-width: 5px;
-    color: rgb(230,230,230);
-    background-color: white;
-    padding-bottom: 1%;
-	padding-left:2%;
+.listing {
+	border-style: solid;
+	border-width: 5px;
+	color: rgb(230,230,230);
+	background-color: white;
+	padding-bottom: 1%;
+	padding-left: 2%;
 }
 
-#listingContainer{
+#listingContainer {
 }
-#listingContainerForUser{
+#listingContainerForUser {
 	background-color: white;
 }
 .listing p {
-		margin-left: 2%;
-		margin-top: 1%;
+	margin-left: 2%;
+	margin-top: 1%;
 }
-.listing h3{
-    
+.listing h3 {
+
 	text-align: left;
 }
 
-#emailText{
-			color:  #0E8C3A;
+#emailText {
+	color: #0E8C3A;
 }
-#faq-body,
-#contact-body,
-#about-body{
+#faq-body, #contact-body, #about-body {
 	margin-top: 2%;
 }
-.modal-content{
+.modal-content {
 	text-align: center;
 }
-#emailRegister,
-#registerSubmit,
-#emailLogin,
-#passwordLogin,
-#loginSubmit,
-#passwordSubmit,
-#emailFP,
-#passwordFP,
-#passwordSubmit,
-#passwordConfirmFP{
+#emailRegister, #registerSubmit, #emailLogin, #passwordLogin, #loginSubmit, #passwordSubmit, #emailFP, #passwordFP, #passwordSubmit, #passwordConfirmFP {
 	margin-top: 2%;
 }
-#emailBox,
-#codeBox,
-#fName,
-#lName,
-#pw,
-#pwc,
-#schedule,
-#CreateAcctStatus{
+#emailBox, #codeBox, #fName, #lName, #pw, #pwc, #schedule, #CreateAcctStatus {
 	margin-top: 3%;
 }
-#checkbox-createL{
-	margin-top:1%;
+#checkbox-createL {
+	margin-top: 1%;
 }
-#index-image{
+#index-image {
 	background-image: url(../img/book2.png);
 	height: 525px;
 	width: 100%;
 }
-ul
-{
-    list-style-type: none;
+ul {
+	list-style-type: none;
 }
-#homepage-h1{
-	color:white;
+#homepage-h1 {
+	color: white;
 }
-.pageBreak{
+.pageBreak {
 	height: 60px;
-	width:1583;
+	width: 1583;
 	font-size: 2.5em;
 	text-align: center;
-    background-color: #0E8C3A;
+	background-color: #0E8C3A;
 }
-#center-content{
-	padding-bottom:5%;
+#center-content {
+	padding-bottom: 5%;
 }
-ol{
-	text-align:left;
+ol {
+	text-align: left;
 }
